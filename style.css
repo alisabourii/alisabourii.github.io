@@ -137,3 +137,9 @@ body {
     font-size: 14px;
   }
 }
+a{
+  color: #7c7070;
+  text-decoration: none;
+  font-size: 19px;
+  display: block;
+}
