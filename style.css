@@ -1,14 +1,19 @@
+/* Navbar */
 .topnav {
   overflow: hidden;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .topnav a {
-  float: left;
   color: #7c7070;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  display: block;
 }
 
 .topnav a:hover {
@@ -18,8 +23,10 @@
 
 .topnav a.active {
   color: #271e1e;
+  font-weight: bold;
 }
 
+/* Genel */
 * {
   margin: 0;
   padding: 0;
@@ -36,8 +43,9 @@ body {
   min-height: 100vh;
 }
 
+/* Sidebar */
 .sidebar {
-  width: 200px;
+  width: 250px;
   background-color: #2c3e50;
   color: #fff;
   padding: 20px;
@@ -63,6 +71,7 @@ body {
   opacity: 0.8;
 }
 
+/* Ana içerik */
 .main-content {
   flex: 1;
   padding: 40px;
@@ -85,4 +94,46 @@ body {
 .main-content ul {
   list-style: circle inside;
   color: #555;
+}
+
+/* RESPONSIVE TASARIM */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .topnav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topnav a {
+    width: 100%;
+    text-align: left;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .main-content h1 {
+    font-size: 22px;
+  }
+
+  .main-content p {
+    font-size: 14px;
+  }
 }
