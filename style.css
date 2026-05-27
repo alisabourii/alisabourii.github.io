@@ -1,135 +1,450 @@
-/* Genel Ayarlar */
+html {
+  scroll-behavior: smooth; /* Tüm sayfa içi link geçişlerini yumuşak yapar */
+}
+
+/* GENEL AYARLAR VE RENK PALETİ */
+:root {
+  --bg-color: #050b14;          /* Koyu Lacivert / Petrol Siyahı */
+  --card-bg: #0b1524;           /* Kart Arka Planı */
+  --primary-color: #3b82f6;      /* Canlı Mavi / Vurgu Rengi */
+  --text-white: #ffffff;
+  --text-muted: #94a3b8;        /* Soluk Gri Metin */
+  --border-color: #1e293b;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 body {
-  background-color: #ffffff;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
+  background-color: var(--bg-color);
+  color: var(--text-white);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Sidebar */
-.sidebar {
-  width: 250px;
-  background-color: #060625;
-  color: white;
-  padding: 20px;
-  height: 100vh;
-  position: fixed;
+/* NAVBAR STİLLERİ */
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
   top: 0;
-  left: 0;
-  overflow-y: auto;
+  background-color: rgba(5, 11, 20, 0.95);
+  backdrop-filter: blur(8px);
   z-index: 1000;
-  text-align: center;
 }
 
-.profile-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid #fff;
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
-.sidebar h2 {
-  margin: 10px 0 5px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.sidebar p {
-  font-size: 14px;
-  margin: 5px 0;
-  opacity: 0.8;
+.logo-badge {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  font-weight: bold;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
 }
 
-/* Ana içerik */
-.main-content {
-  margin-left: 250px;
-  padding: 40px;
-  background-color: #ffffff;
-  color: #000000;
+.logo-text {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+  color: var(--primary-color);
+}
+
+/* HERO SECTION (GİRİŞ) STİLLERİ */
+.hero-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.hero-content {
   flex: 1;
 }
 
-.main-content h1 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #000000;
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 25px;
 }
 
-.main-content p {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #000000;
-  line-height: 1.6;
+.hero-content .highlight {
+  color: var(--primary-color);
 }
 
-.main-content ul {
-  list-style: circle inside;
-  color: #eaeaea;
+.hero-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 35px;
+  max-width: 650px;
 }
 
+/* SOSYAL MEDYA */
+.social-links {
+  margin-bottom: 35px;
+}
 
-/* Genel link ve başlık stilleri */
-a {
-  color: #ffffff;
+.social-title, .skills-title, .section-subtitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.icons-row {
+  display: flex;
+  gap: 12px;
+}
+
+.icons-row a {
+  width: 40px;
+  height: 40px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-muted);
   text-decoration: none;
-  font-size: 19px;
-  display: block;
+  transition: all 0.3s ease;
 }
 
-h3 {
-  margin-left: 20px;
+.icons-row a:hover {
+  color: var(--text-white);
+  border-color: var(--primary-color);
+  background-color: rgba(59, 130, 246, 0.1);
 }
 
-.DescraptionParagraf {
-  margin-left: 30px;
+/* YETENEK ETİKETLERİ */
+.skills-section {
+  margin-bottom: 40px;
 }
 
-/* RESPONSIVE */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  color: var(--text-white);
+}
+
+/* BUTONLAR */
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-white);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--card-bg);
+  border-color: var(--text-muted);
+}
+
+/* HERO GÖRSEL KARTI */
+.hero-image-wrapper {
+  flex-shrink: 0;
+}
+
+.image-card {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  background-color: #111827;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+/* Resmin dışındaki kapsayıcı kutu */
+.image-container {
+  width: 300px;  /* Kendi tasarımına göre genişliği ayarla */
+  height: 300px; /* Kendi tasarımına göre yüksekliği ayarla */
+  position: relative;
+  border-radius: 24px; /* Ekran görüntündeki yuvarlatılmış köşeler */
+  overflow: hidden;
+}
+
+/* İçindeki gerçek resim etiketi */
+.image-container img {
+  width: 100%;
+  height: 100%;
+
+  /* İŞİN SİHRİ BURADA: */
+  object-fit: cover;    /* Resmi bozmadan, kutuyu dolduracak şekilde ortalar */
+  object-position: center top; /* Kafanın kesilmemesi için odağı yukarı taşır */
+}
+.placeholder-image {
+  width: 350px; /* Tasarımına göre */
+  height: 350px;
+
+  background-image: url('ali.png');
+
+  /* Geri zoom yapıp sığdırma kodları: */
+  background-size: cover;       /* Resmi kutuya orantılı sığdırır */
+  background-position: center;  /* Merkeze odaklar */
+  background-repeat: no-repeat;
+
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* "Available for work" butonunu alta yaslamak için */
+  padding-bottom: 20px;
+}
+.status-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* SERVİSLER ALANI STİLLERİ */
+.services-section {
+  border-top: 1px solid var(--border-color);
+  padding: 60px 0;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(30, 41, 59, 0.7);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.service-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background-color: rgba(59, 130, 246, 0.05);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.service-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  align-self: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-link {
+  transform: translateX(5px);
+}
+
+/* KİTAP BÖLÜMÜ STİLLERİ */
+.published-section {
+  border-top: 1px solid var(--border-color);
+  padding: 60px 0 100px 0;
+}
+
+.published-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.book-flex {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.book-cover-placeholder {
+  width: 140px;
+  height: 190px;
+  background: linear-gradient(135deg, #b91c1c, #7f1d1d);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  border: 1px solid #991b1b;
+}
+
+.book-cover-placeholder small {
+  font-size: 0.65rem;
+  background-color: rgba(255,255,255,0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.book-details h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.book-details p {
+  color: var(--text-muted);
+  max-width: 600px;
+}
+
+/* RESPONSIVE TASARIM (MOBİL UYUMLULUK) */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-desc {
+    margin: 0 auto 35px auto;
+  }
+  .icons-row, .tags-container, .cta-buttons {
+    justify-content: center;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .nav-menu {
+    display: none; /* Basitlik adına mobilde menü gizlendi */
+  }
+}
+
 @media (max-width: 768px) {
-  body {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .book-flex {
     flex-direction: column;
+    text-align: center;
   }
-
-  .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding: 20px;
-  }
-
-  .topnav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .topnav a {
-    width: 100%;
-    text-align: left;
-    padding: 10px 16px;
-  }
-
-  .profile-photo {
-    width: 90px;
-    height: 90px;
-  }
-
-  .main-content h1 {
-    font-size: 22px;
-  }
-
-  .main-content p {
-    font-size: 14px;
+  .hero-content h1 {
+    font-size: 2rem;
   }
 }
