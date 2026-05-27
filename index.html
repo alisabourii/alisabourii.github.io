@@ -5,81 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Sabouri</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<div class="container">
-    <aside class="sidebar">
-        <img src="ali.jpeg" alt="Fotoğrafım" class="profile-photo">
-        <h2>Ali Sabouri</h2>
-        <p>Compter Programmer</p>
-        <p>Yalova University<br> Electrical Electronics Engennering</p>
-        <ul class="author__urls social-icons" style="">
-            <a target="_blank" href="https://alisabouri516@gmail.com"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a>
-            <a target="_blank" href="https://x.com/justAli0369"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a>
-            <a target="_blank" href="https://www.linkedin.com/in/ali-sabouri-b75130226/"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-            <a target="_blank" href="https://github.com/alisabourii"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a>
-            <a target="_blank" href="https://stackoverflow.com/users/16464908/ali-sabouri"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stackoverflow</a>
-            <a target="_blank" href="https://medium.com/@alisabouri516"><i class="fas fa-fw fa-graduation-cap"></i> Medium</a>
-            <a target="_blank" href=""><i class="fab fa-fw fa-google"></i> Google Developer</a>
+<header class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <span class="logo-badge">AS</span>
+            <span class="logo-text">Ali SABOURI</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="#" class="active">HOME</a>
+            <a href="#me">ABOUT</a>
+            <a href="#servises">SERVICES</a>
+            <!--<a href="#">EXPERTISE</a>-->
+            <a href="projects.html">PROJECTS</a>
+            <a href="#media">MEDIA</a>
+            <a href="#blog">BLOG</a>
+            <!--<a href="#">BOOK</a>-->
+            <!--<a href="#">RESUME</a>-->
+            <!--<a href="#">CONTACT</a>-->
+        </nav>
+    </div>
+</header>
 
-        </ul>
-    </aside>
+<section class="hero-section">
+    <div class="hero-container">
+        <div class="hero-content" id="me">
+            <h1>Hi, I'm <span class="highlight">Ali SABOURI</span> <br>Electrical and Electronics Engineering student</h1>
+            <p class="hero-desc">
+                I am a systems programmer specializing in embedded systems and performance-oriented software development.
+                I bridge my theoretical knowledge in signal processing, microcontrollers, and system-level design with practice
+                by building reliable, efficient, and robust systems for TÜBİTAK-supported local communication and unmanned vehicle projects.
+                Alongside engineering practical industrial solutions as a freelancer, I am constantly exploring ways to build faster,
+                more optimized systems. I am always open to collaborating with teams that value open knowledge,
+                rapidly adapt to emerging technologies, and push the boundaries of engineering.
+            </p>
 
-    <main class="main-content">
-        <p class="DescraptionParagraf">
-            Hey, this is Ali! I’m an Electrical and Electronics Engineering student working at the intersection of communication systems, embedded hardware, and high-performance software development. My work focuses on building reliable, efficient systems for real-world applications, especially in unmanned vehicles, signal processing, and hardware–software co-design.
+            <div class="social-links" id="media">
+                <p class="social-title" >FIND ME ON</p>
+                <div class="icons-row">
+                    <a href="https://github.com/alisabourii" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ali-sabourii/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@alisabouri121" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="alisabouri516@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
 
-            I’m currently involved in research and engineering projects through TÜBİTAK and industry collaborations, where I work on DSP, FFT-based analysis, digital filtering, microcontrollers, sensors, and system-level design. I also develop performance-oriented software as a freelancer, combining low-level programming with practical engineering solutions.
+            <div class="skills-section">
+                <p class="skills-title">TOP SKILLS</p>
+                <div class="tags-container">
+                    <span class="skill-tag">C / C++</span>
+                    <span class="skill-tag">Electronics </span>
+                    <span class="skill-tag">ATMEGA</span>
+                    <span class="skill-tag">ARM Cortex-M</span>
+                    <span class="skill-tag">CAN-BUS / LIN-BUS</span>
+                    <span class="skill-tag">STM32 / ESP32</span>
+                    <span class="skill-tag">Communication </span>
+                    <span class="skill-tag">Firmware Architecture</span>
+                </div>
+            </div>
 
-            I enjoy building tools, experimenting with new technologies, and contributing to projects that value open knowledge and collaboration. In my free time, I like exploring new ideas, learning new skills, and pushing my technical limits. I’m always happy to meet new people and hear about their journeys—feel free to reach out if you’d like to chat or collaborate!
-        </p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Hire Me</a>
+                <a href="#" class="btn btn-secondary">View Resume</a>
+            </div>
+        </div>
 
+        <div class="hero-image-wrapper">
+            <div class="image-card">
+                <div class="placeholder-image">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <span class="status-badge">Available for work</span>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="services-section">
+    <div class="services-container">
+        <p class="section-subtitle">WHAT I DO</p>
+        <h2 class="section-title" id="servises">Services I Offer</h2>
 
-        <h2>Top Projects</h2>
-        <h3 style="margin-top: 2%"><a target="_blank" href="https://github.com/alisabourii/AndroidSuKa" style="color: black">Water Leak Project</a></h3>
-        <p class="DescraptionParagraf">
-            Water Leak – G300 is a specialized mobile application developed for professional technicians to detect water leaks. The app connects with the G300 device provided to the technician and helps identify possible leak points.<br>
-            How It Works:<br>
-            🔗 Device Connection – The app integrates seamlessly with the G300 water leak detection device.<br>
-            🎧 Sound Analysis – The technician moves the device around areas where a leak is suspected. The sound data collected by the device is transferred to the app.<br>
-            📊 Graph & Measurement – Incoming sound signals are displayed graphically within the app. Peak values are highlighted, and real-time measurements can be tracked.<br>
-            🔊 Audio Output – The app also outputs the received signals as sound, allowing the technician to listen in real time.<br>
-            🎚 Band Adjustment – Users can adjust the frequency band of the sounds for more precise measurements.<br>
-        </p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3>Embedded Systems</h3>
+                <p>Developing firmware and low-level software for microcontrollers and embedded processors with a focus on reliability and efficiency.</p>
+                <a href="#" class="service-link"><i class="fas fa-arrow-right"></i></a>
+            </div>
 
-        <h3>Common Exam Management and Optimization System (ERSYazılım)</h3>
-        <p class="DescraptionParagraf">
-            Developed with C# and MySQL, this software aims to improve the security and efficiency of common exams in secondary schools.
-            By implementing an innovative seating algorithm, the system optimized the distribution of students and proctors across exam halls,
-            reducing cheating incidents by 60%.
-            Through integration with the national "E-Okul" platform,
-            student and teacher data were processed quickly and accurately,
-            enabling standardized exam planning and reporting.
-            With its user-friendly interface and advanced reporting tools, the system made exam organizations more fair, secure, and efficient.
-        </p>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="far fa-clock"></i>
+                </div>
+                <h3>Real-Time Software</h3>
+                <p>Designing and implementing RTOS-based systems, interrupt-driven architectures, and time-critical control loops.</p>
+                <a href="#" class="service-link"><i class="fas fa-arrow-right"></i></a>
+            </div>
 
-        <h3><a target="_blank" href="https://github.com/alisabourii/koshar_air_purifier" style="color: black">Koshar Air Purifier</a></h3>
-        <p class="DescraptionParagraf">
-            The objective of this project is to develop a compact and portable system for monitoring and improving indoor air quality.
-            The system uses sensors to continuously measure oxygen and humidity levels in the room and transmits this data in real-time to a website.
-            This allows users to monitor the air quality of their environment instantly.
-            Additionally, the system automatically sends notifications to alert the user when the measured values fall below or
-            exceed predefined thresholds. The compact design of the device allows it to be easily used in any room,
-            and its built-in battery enables it to operate independently for extended periods.
-            The ultimate goal of this system is to provide a healthy and comfortable living environment indoors,
-            optimize air quality, and minimize potential health risks.
-        </p>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Hardware Companion Apps</h3>
+                <p>Designing specialized applications tailored for embedded devices, transforming raw sensor data into intuitive user interfaces and actionable field insights.</p>
+                <a href="#" class="service-link"><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <h2>Academic</h2>
-        <h3 style="margin-top: 2%"></h3>
-        <p class="DescraptionParagraf">
-            TÜBİTAK: 247-B European Research Council (ERC) Support Program – 2025/1<br>
-            Project: Afet Durumlarında UDP Tabanlı Yerel Haberleşme Prototipi
-        </p>
-    </main>
-</div>
+<section class="published-section">
+    <div class="published-container">
+        <p class="section-subtitle" id="blog">PUBLISHED WORK</p>
+        <div class="book-flex">
+            <div class="book-cover-placeholder">
+                <span>Connect ESP-32 TO<br><small>Android App</small></span>
+            </div>
+            <div class="book-details">
+                <h2>Connect ESP-32 TO Android App</h2>
+                <p>How to connecting ESP32 to Android App on the UDP protocol <a href="https://medium.com/@alisabouri516/connect-esp-32-to-android-app-53b380e48232">Click Here To Read</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="app.js"></script>
 </body>
 </html>
