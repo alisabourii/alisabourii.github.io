@@ -448,3 +448,154 @@ body {
     font-size: 2rem;
   }
 }
+
+/* PROJELER ALANI VE KART STİLLERİ */
+.projects-section {
+  padding: 80px 0;
+  background-color: #050b14; /* Petrol siyahı / Koyu arka plan */
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-subtitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #3b82f6; /* Vurgu mavisi */
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+/* GRID YAPISI */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Yan yana 3 kart */
+  gap: 30px; /* Kartlar arası boşluk */
+}
+
+/* PROJE KARTI ANA GÖVDE */
+.project-card {
+  background-color: #0b1524; /* Kart içi hafif açık petrol laciverti */
+  border: 1px solid #1e293b; /* İnce gri/lacivert sınır çizgisi */
+  border-radius: 16px;       /* Yumuşatılmış modern köşeler */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;         /* Kartların eşit boyda kalması için */
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+  border-color 0.3s ease,
+  box-shadow 0.3s ease;
+}
+
+/* HOVER (ÜZERİNE GELİNCE) EFEKTİ */
+.project-card:hover {
+  transform: translateY(-6px); /* Hafifçe yukarı kayma */
+  border-color: rgba(59, 130, 246, 0.5); /* Sınır çizgisinin mavi parlaması */
+  box-shadow: 0 12px 30px rgba(5, 11, 20, 0.8),
+  0 4px 20px rgba(59, 130, 246, 0.05);
+}
+
+/* KART ÜST KISIM (KATEGORİ) */
+.project-card-header {
+  margin-bottom: 15px;
+}
+
+.project-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8; /* Soluk gri */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* KART BAŞLIĞI */
+.project-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+/* PROJE AÇIKLAMASI */
+.project-description {
+  color: #94a3b8; /* Okunabilir mat gri text */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  flex-grow: 1; /* Açıklama kısa olsa bile butonu en alta iter */
+}
+
+/* TEKNOLOJİ ETİKETLERİ (TAGS) */
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.tech-tag {
+  background-color: rgba(30, 41, 59, 0.5); /* Yarı şeffaf etiket arka planı */
+  color: #cbd5e1;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* KART ALTI (OK/LİNK BUTONU) */
+.project-card-footer {
+  display: flex;
+  justify-content: flex-end; /* Butonu sağ alta yaslar */
+  align-items: center;
+}
+
+.project-action-btn {
+  width: 38px;
+  height: 38px;
+  background-color: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3b82f6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Butonun üzerine gelindiğinde maviye dönmesi */
+.project-card:hover .project-action-btn {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* MOBİL VE TABLET UYUMU (RESPONSIVE) */
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tabletlerde yan yana 2 kart */
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Mobilde tek sütun kart */
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
