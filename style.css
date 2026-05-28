@@ -590,7 +590,6 @@ body {
     grid-template-columns: repeat(2, 1fr); /* Tabletlerde yan yana 2 kart */
   }
 }
-
 @media (max-width: 640px) {
   .projects-grid {
     grid-template-columns: 1fr; /* Mobilde tek sütun kart */
